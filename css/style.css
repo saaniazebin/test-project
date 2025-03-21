@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    background: url(../image/sky2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1; 
+}
+body::after{
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background:rgba(0, 0, 0.7)
+    z-index: -1;
+}
+.main{
+    width: 900px;
+    height: 900px;
+    /* background: blue; */
+    border: 2px solid white;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%) rotate(0deg);
+    border-radius: 50%;
+   animation: earth 30s infinite linear;
+}
+.main::after{
+    content: "";
+    width: 100px;
+    height: 100px;
+    background:url(../image/earth.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+left: 0;
+top: 50%;
+transform: translate(-50%,-50%);
+position: absolute;
+    border-radius: 50%;
+border: 2px solid white;
+}
+@keyframes earth{
+    0%{
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%,-50%) rotate(360deg);
+    }
+}
+
+
+.main .one{
+    width: 20px;
+    height:20px ;
+    background:blue;
+    left: -10%;
+    top: 50%;
+    transform: translate(-50% ,100%);
+    
+    position: absolute;
+    border-radius: 50%;
+
+
+}
+
+.two{
+    width: 160px;
+    height: 160px;
+    /* background-color: red; */
+    top: 50%;
+    left: -11%;
+    transform: translateY(-50%);
+    position: absolute;
+    border: 2px solid white;
+    border-radius: 50%;
+    
+}
+
+
+.sun{
+    width: 300px;
+    height: 300px;
+    background: url(../image/sun.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.mercury{
+    width: 450px;
+    height: 450px;
+    /* background: red; */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%) rotate(90deg);
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid white;
+    position: relative;
+    animation: mer 10s infinite linear;
+}
+.mercury .one{
+    width: 100px;
+    height: 100px;
+    background: url(../image/Mercury.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid white;
+    
+}
+@keyframes mer{
+    0%{
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%,-50%) rotate(360deg);
+    }
+}
+
+.jupiter{
+    width: 650px;
+    height: 650px;
+    /* background: red; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(90deg);
+    position: absolute;
+    border: 2px solid white;
+    border-radius: 50%;
+    animation: jupi 50s infinite linear;
+}
+.jupiter .one{
+    width: 130px;
+    height: 130px;
+    background: url(../image/ju.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+
+}
+@keyframes jupi{
+    0%{
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+    100%{
+     transform: translate(-50%,-50%) rotate(360deg);
+    }
+}
